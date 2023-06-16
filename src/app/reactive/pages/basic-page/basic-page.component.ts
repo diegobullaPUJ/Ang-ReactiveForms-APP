@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { FormBuilder, Validators, FormGroup } from '@angular/forms';
+import { ValidatorsService } from 'src/app/shared/services/validators.service';
 
 const RTX5090 = {
   name: 'RTX 5090',
@@ -12,7 +13,7 @@ const RTX5090 = {
   styles: [
   ]
 })
-export class BasicPageComponent{
+export class BasicPageComponent {
 
   // public myForm: FormGroup = new FormGroup ({
   //   name: new FormControl(''),
@@ -26,12 +27,14 @@ export class BasicPageComponent{
     inStorage: ['', [ Validators.required, Validators.min(0) ]],
   })
 
-  constructor(private fb: FormBuilder) {}
+  constructor(
+    private fb: FormBuilder,
+    private validatorsService: ValidatorsService,
+  ) {}
 
 
   isValidField( field: string ): boolean | null {
-    return this.myForm.controls[field].errors
-    && this.myForm.controls[field].touched;
+    return this.validatorsService.isValidField( this.myForm, field );
   }
 
   getFieldError( field: string ): string | null {
@@ -51,10 +54,12 @@ export class BasicPageComponent{
   }
 
   onSave():void {
-    if( this.myForm.invalid ) return;
-    console.log( this.myForm.value )
+    if( this.myForm.invalid ) {
+      this.myForm.markAllAsTouched();
+      return;
+    }
 
-    this.myForm.reset({ price: 10, inStorage: 0  });
+    this.myForm.reset({ price: 0, inStorage: 0  });
 
   }
 

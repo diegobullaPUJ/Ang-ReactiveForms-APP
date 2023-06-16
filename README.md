@@ -18,3 +18,9 @@
 8. FormBuilder
 9. FormGroup
 10. FormArray
+11. Validaciones manuales
+12. Validaciones asíncronas
+13. Validar contra expresiones regulares
+14. Separar la lógica de validaciones
+15. Estado del formulario
+16. Mensajes de error personalizados
