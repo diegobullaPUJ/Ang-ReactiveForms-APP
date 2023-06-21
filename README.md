@@ -8,19 +8,20 @@
 
 ## Descripción
 
-1. Aplicación de Angular ReactiveForms donde abordaremos los siguientes temas.
-2. Formularios Reactivos
-3. Lazyload y tareas relacionadas
-4. Validaciones propias de Angular
-5. Validaciones personalizadas
-6. Validaciones asíncronas
-7. Arreglos y objetos anidados
-8. FormBuilder
-9. FormGroup
-10. FormArray
-11. Validaciones manuales
-12. Validaciones asíncronas
-13. Validar contra expresiones regulares
-14. Separar la lógica de validaciones
-15. Estado del formulario
-16. Mensajes de error personalizados
+Aplicación de Angular de formularios reactivos donde abordaremos los siguientes temas.
+
+1. Formularios Reactivos
+2. Lazyload y tareas relacionadas
+3. Validaciones propias de Angular
+4. Validaciones personalizadas
+5. Validaciones asíncronas
+6. Arreglos y objetos anidados
+7. FormBuilder
+8. FormGroup
+9. FormArray
+10. Validaciones manuales
+11. Validaciones asíncronas
+12. Validar contra expresiones regulares
+13. Separar la lógica de validaciones
+14. Estado del formulario
+15. Mensajes de error personalizados
